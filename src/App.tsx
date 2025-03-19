@@ -11,11 +11,13 @@ import Admin from './pages/Admin';
 import Login from './pages/Login';
 import ProtectedRoute from './components/ProtectedRoute';
 import Restauration from './pages/Restauration';
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
+      <GoogleAnalytics />
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">

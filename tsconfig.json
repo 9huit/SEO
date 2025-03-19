@@ -3,5 +3,12 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "target": "ES6",       // Cibler ECMAScript 2015 ou supérieur
+    "module": "commonjs",  // Utiliser le module CommonJS pour la compatibilité Node.js
+    "esModuleInterop": true,
+    "strict": true,        // Activer les vérifications strictes
+    "skipLibCheck": true   // Pour éviter des erreurs dans les fichiers de bibliothèque
+  }
 }

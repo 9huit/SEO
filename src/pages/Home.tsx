@@ -1,6 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+
+const handleClick = (id: string) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "link_click",
+    click_id: id,
+  });
+};
+
 
 const Home = () => {
   return (
@@ -29,9 +40,14 @@ const Home = () => {
           <div>
             <h1 className="text-5xl md:text-6xl font-serif mb-6">Bienvenue dans Luxury Living</h1>
             <p className="text-xl md:text-2xl mb-8">Faites l’expérience d’un confort et d’une élégance inégalés</p>
-            <button className="bg-white text-gray-900 px-8 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition-colors">
-            Réservez votre séjour
-            </button>
+            <Link
+              to="/Chambres-et-suites"
+              id="chambre"
+              className="bg-white text-gray-900 px-8 py-3 rounded-md text-lg font-medium hover:bg-opacity-90 transition-colors inline-block text-center"
+              onClick={() => handleClick("chambre")}
+            >
+              Voir nos chambres
+            </Link>
           </div>
         </motion.div>
       </section>
