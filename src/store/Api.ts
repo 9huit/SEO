@@ -66,6 +66,7 @@ export const fetchAnalyticsData = async () => {
 
   } catch (error) {
     console.error("❌ Erreur lors de la récupération des données GA4:", error);
+    console.error("❌ Erreur lors de la récupération des données GA4:", error);
     throw error;
   }
 };
