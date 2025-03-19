@@ -7,7 +7,8 @@ const ACCESS_TOKEN = '4/0AQSTgQEbG-juGADCImsYM68947hdYiu6cpdZkB2h0XmVOg3_ZlYr8M_
 const PROPERTY_ID = '4/0AQSTgQEbG-juGADCImsYM68947hdYiu6cpdZkB2h0XmVOg3_ZlYr8M_vrBAQr0ymwUxXNw';  // Votre Property ID GA4
 
 // URL de l'API Google Analytics Data
-const API_URL = `https://cors-anywhere.herokuapp.com/https://analyticsdata.googleapis.com/v1beta/properties/${PROPERTY_ID}:runReport`;
+const API_URL = `https://analyticsdata.googleapis.com/v1beta/properties/${PROPERTY_ID}:runReport`;
+
 
 // Définition des interfaces pour les types de données attendus
 interface MetricValue {
@@ -65,7 +66,6 @@ export const fetchAnalyticsData = async () => {
     };
 
   } catch (error) {
-    console.error("❌ Erreur lors de la récupération des données GA4:", error);
     console.error("❌ Erreur lors de la récupération des données GA4:", error);
     throw error;
   }
